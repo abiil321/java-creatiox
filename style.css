@@ -5,14 +5,14 @@
 }
 
 body {
-  font-family: "Arial", sans-serif;
+  font-family: 'Poppins', sans-serif;
   line-height: 1.6;
 }
 
 /* Header Styles */
 header {
-  background: #0000ff;
-  padding: 1rem 0;
+  background: #0000ffed;
+  padding: 0.8rem 0;
   position: fixed;
   width: 100%;
   top: 0;
@@ -24,20 +24,26 @@ nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 0 2rem;
+  padding: 0 3rem;
+  max-width: 1460px;
+  /* margin: 0 auto; */
 }
 
 .logo {
   display: flex;
+  align-items: center;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 900;
   text-decoration: none;
+  letter-spacing: 1px;
 }
 
 .logo img {
-  width: 40px;
-  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+  margin-right: 12px;
+  padding: 4px;
 }
 
 a.logo {
@@ -48,15 +54,20 @@ a.logo {
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 3rem;
+  margin: 0;
+  justify-content: flex-end;
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
   font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
   transition: all 0.3s ease;
   position: relative;
+  text-transform: uppercase;
 }
 
 .nav-links a:hover {
@@ -90,12 +101,14 @@ a.logo {
 
 /* Hero Section */
 .hero {
-  background: #0000ff;
+  background: #0000ffed;
   min-height: 100vh;
   display: flex;
+  justify-content: center; /* tambahkan ini */
   align-items: center;
   position: relative;
   overflow: hidden;
+  padding: 2rem 0; /* jaga jarak vertikal */
 }
 
 .hero::before {
@@ -106,6 +119,8 @@ a.logo {
   width: 60%;
   height: 100%;
   background: url("Asset/bgimg.png") center/cover;
+  background-position: right;
+  background-size: 150% 150%;
   opacity: 0.9;
   z-index: 1;
 }
@@ -127,27 +142,42 @@ a.logo {
 }
 
 .hero-text h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
-  line-height: 1.2;
+  font-size: 2rem;         /* Ukuran lebih kecil dari sebelumnya */
+  font-weight: 800;        /* Medium-bold, tidak terlalu tebal */
+  line-height: 1.4;        /* Jarak antar baris lebih proporsional */
+  max-width: 600px;        /* Agar teks tidak melebar terlalu panjang */
+  margin-bottom: 1rem;
+  margin-top: 60px;
+  /* width: 730px; */
+  /* height: 120px; */
 }
 
 .hero-text p {
   font-size: 1.1rem;
   margin-bottom: 2rem;
   opacity: 0.9;
-  line-height: 1.6;
+  line-height: 1.8;
+  font-weight: 400;
+  opacity: 0.9;
+  /* padding-right:  3rem; */
+  /* width: 662px; */
+  /* height: 180px; */
+  /* max-width: 600px;  */
 }
 
 .cta-button {
   background: white;
   color: #000000;
   padding: 1rem 2rem;
+  width: 270px;
+  /* height: 57px; */
+  margin-top: 90px;
+  /* left: 60px; */
   border: none;
-  border-radius: 50px;
-  font-size: 1rem;
-  font-weight: 600;
+  border-radius: 10px;
+  font-size: 25px;
+  font-weight: 500;
+  /* line-height: 100%; */
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -166,13 +196,17 @@ a.logo {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  nav {
+    padding: 0 1.5rem;
+  }
+
   .nav-links {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    background: #0000ff49;
+    background: #dbdbde49;
     backdrop-filter: blur(12px);
     flex-direction: column;
     padding: 1rem 2rem;
@@ -211,6 +245,15 @@ a.logo {
 @media (max-width: 480px) {
   nav {
     padding: 0 1rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .logo img {
+    width: 30px;
+    height: 30px;
   }
 
   .hero-text h1 {
