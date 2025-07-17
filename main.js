@@ -30,11 +30,11 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 window.addEventListener("scroll", () => {
   const header = document.querySelector("header");
   if (window.scrollY > 100) {
-    header.style.background = "rgba(76, 110, 245, 0.95)";
+    header.style.background = "#0000ff";
     header.style.backdropFilter = "blur(10px)";
   } else {
     header.style.background =
-      "linear-gradient(135deg, #4c6ef5 0%, #3b50df 100%)";
+      "#0000ff";
     header.style.backdropFilter = "none";
   }
 });

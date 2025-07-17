@@ -11,7 +11,7 @@ body {
 
 /* Header Styles */
 header {
-  background: #0000ffed;
+  background: #0000ff;
   padding: 0.8rem 0;
   position: fixed;
   width: 100%;
@@ -101,7 +101,7 @@ a.logo {
 
 /* Hero Section */
 .hero {
-  background: #0000ffed;
+  background: #0000ff;
   min-height: 100vh;
   display: flex;
   justify-content: center; /* tambahkan ini */
@@ -171,13 +171,13 @@ a.logo {
   padding: 1rem 2rem;
   width: 270px;
   /* height: 57px; */
-  margin-top: 90px;
+  margin-top: 10px;
   /* left: 60px; */
   border: none;
   border-radius: 10px;
   font-size: 25px;
   font-weight: 500;
-  /* line-height: 100%; */
+  line-height: 100%;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -252,8 +252,8 @@ a.logo {
   }
 
   .logo img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
   }
 
   .hero-text h1 {
